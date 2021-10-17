@@ -1,0 +1,26 @@
+:root {
+    --primary: rgb(78, 139, 231);
+    --secondary: rgb(35, 12, 88);
+    --tertiary: white;
+    --light-dark: #c7c7c7;
+    --dark: #222;
+}
+
+header {
+    background-color: var(--secondary);
+}
+
+h1, h2 {
+    color: var(--tertiary);
+}
+
+#employee-card {
+    margin: 50px;
+}
+
+#card-header {
+    background-color: var(--primary);
+    color: var(--tertiary);
+    padding: 50px 50px 30px 50px;
+}
+

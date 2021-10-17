@@ -5,11 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class=''>My Team</h1>
+    <header class="uk-container uk-padding-large">
+        <h1 class="uk-heading-large uk-text-center uk-align-left@m">My Team</h1>
     </header>
+    <div class="uk-card uk-card-default" id="employee-card">
+        <div class="uk-card-title" id="card-header">
+            <h2 id="name"></h2>
+            <div id="role">
+                <span uk-icon="icon: user"></span>
+                <span id="position-title"></span>
+            </div>
+        </div>
+        <div class="uk-card-body">
+            <div class="uk=grid-small">
+                <div class="uk-card uk-card-default" id="1">1</div>
+                <div id="2"><p>1</p></div>
+                <div id="3"><p>1</p></div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit-icons.min.js"></script>
+    <script src="uikit/dist/js/uikit-icons.min.js"></script>
 </body>
 </html>
