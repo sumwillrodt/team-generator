@@ -9,7 +9,9 @@ Create a Node.js command-line application that takes in information about employ
 The application also uses file system module, inquirer module, and Jest (for testing).
 
 ## Usage
-Generte a roster of team information.
+Generate a roster of team information.
+[Walkthrough Video](src/team_walkthrough.mov)
+(src/team-generator_screenshot.png)
 
 ## Tests
 [Employee Test](__tests__/Employee.test.js)
