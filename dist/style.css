@@ -1,6 +1,6 @@
 :root {
     --primary: rgb(78, 139, 231);
-    --secondary: rgb(35, 12, 88);
+    --secondary: rgb(45, 12, 233);
     --tertiary: white;
     --light-dark: #c7c7c7;
     --dark: #222;
@@ -8,9 +8,10 @@
 
 header {
     background-color: var(--secondary);
+    color: var(--tertiary);
 }
 
-h1, h2 {
+h1 {
     color: var(--tertiary);
 }
 

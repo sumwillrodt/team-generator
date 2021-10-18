@@ -2,7 +2,8 @@ const inquirer = require("inquirer");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-
+const fs = require('fs');
+const generateHTML = require("./src/pageTemplate");
 
 const teamArr = [];
     
@@ -159,9 +160,36 @@ const addEmployee = () => {
             const intern = new Intern(EmployeeInfo.name, EmployeeInfo.id, EmployeeInfo.email, EmployeeInfo.school);
             teamArr.push(intern);
         }
+
+        return teamArr;
+    });
+};
+
+const { resolve } = require('path');
+
+const writeFile = fileContent => {
+    fs.writeFile('./dist/index.html', fileContent, err => {
+        if (err) {
+            reject(err);
+            return;
+        } 
+        
+        resolve({
+            ok: true,
+            message: 'File created!'
+        });
     });
 };
 
 
 addManager()
     .then(addEmployee)
+    .then(teamArr => {
+        return generateHTML(teamArr);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    });
